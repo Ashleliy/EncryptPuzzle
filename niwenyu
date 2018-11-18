@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main ()
+{
+	int N;//往后错开N个
+	char x;//每次循环输入一个char
+	//输入
+	while(x!=' ')//当输入的不是空格
+	{
+		scanf("%c%d",&x,&N);//输入
+        if((x>='a'&&x<='z')||(x>='A'&&x<='Z'))//如果输入的是小写字母或者是大写字母
+        {
+			if(x>='Z'-N&&x<='Z')//如果c是在Z到Z-N之间的字母（包括小写）
+				("%c",x='A'+26-x+N);//把x从A后顺N位数
+			else printf("%c",x=x+N);//把x往后顺N位
+		}
+	}
+	printf(" ");//输出空格
+	return 0;
+}
